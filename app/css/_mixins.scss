@@ -2,26 +2,26 @@
 /* 
 /*===================================*/
 @mixin bodyType {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400; 
   font-style: normal; 
 }
 
-@mixin italicType{
-	 font-family: 'Roboto', sans-serif;
+@mixin myNameType{
+	font-family: 'Lato', sans-serif;
   font-weight: 400; 
-  font-style: italic; 
+  font-style: normal; 
 }
 
-@mixin subtitleType{
-	font-family: 'Roboto', sans-serif;
-  	font-weight: 500; 
+@mixin jobTitleType{
+	font-family: 'Lato', sans-serif;
+  	font-weight: 100; 
   	font-style: normal; 
 }
 
 @mixin linkType{
-	font-family: 'Roboto', sans-serif;
-  	font-weight: 500; 
+	font-family: 'Lato', sans-serif;
+  	font-weight: 400; 
   	font-style: normal; 
 }
 
