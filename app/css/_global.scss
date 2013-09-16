@@ -1,0 +1,495 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed,
+ figure, figcaption, footer, header, hgroup,
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+ 	margin: 0;
+ 	padding: 0;
+ 	border: 0;
+ 	font-size: 100%;
+ 	font: inherit;
+ 	vertical-align: baseline;
+ }
+ /* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure,
+ footer, header, hgroup, menu, nav, section {
+ 	display: block;
+ }
+ body {
+ 	line-height: 1;
+ }
+ ol, ul {
+ 	list-style: none;
+ }
+ blockquote, q {
+ 	quotes: none;
+ }
+ blockquote:before, blockquote:after,
+ q:before, q:after {
+ 	content: '';
+ 	content: none;
+ }
+ table {
+ 	border-collapse: collapse;
+ 	border-spacing: 0;
+ }
+//=========== my code below =================
+html {
+	font-size: 62.5%;
+}
+
+body {
+	width:100%;
+	margin: 0 0;
+	font-size: 16px; //fall back to older browser
+	font-size: 1.6rem;
+	line-height: 1.3;
+	color: $textColor;
+	@include bodyType;
+	-webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none;
+	color: $white;
+}
+a:hover {
+}
+
+h1 {
+	font-size: 24px;
+	font-size: 2.4em;
+}
+
+h2 {
+	font-size: 24px;
+	font-size: 2.4em;
+}
+h3 {
+
+	font-size: 18px;
+	font-size: 1.8em;
+}
+
+header {
+	color: $green;
+	background-color: $green;
+	height: 60px;
+	height: 6rem;
+
+}
+
+header img {
+	padding-left:50px;
+	padding-left:5rem;
+	padding-top: 1rem;
+}
+
+header nav.global {
+	float: right;
+}
+
+header nav.global a {
+	display: block;
+	background-color: $green;
+
+}
+header nav.global ul {
+	list-style: none;
+	float: right;
+}
+
+header nav.global ul li {
+	list-style: none;
+	float: left;
+	text-align: center;
+	vertical-align: center;
+	padding-top: 2rem;
+	padding-right: 2rem;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+	min-width: 990px;
+	padding: 0;
+}
+
+.flexslider {
+	border: 0;
+
+	&:hover {
+		.flex-direction-nav {
+			a {
+				opacity: 1;
+			}
+			.flex-prev {
+				left: 10px;
+			}
+			.flex-next {
+				right: 10px;
+			}
+		}
+	}
+
+	.slides {
+		img {
+			margin: 0 auto;
+			max-width: 100%;
+			width: auto;
+		}
+	}
+}
+
+.flex-control-nav {
+	width: 100%;
+	position: absolute;
+	bottom: 5px;
+	text-align: center;
+}
+
+.flex-direction-nav {
+	a {
+		background: url('../images/sprites.png') no-repeat;
+		height: 48px;
+		opacity: 1;
+		width: 48px;
+	}
+	a.flex-prev {
+		background-position: 0 0;
+		left: 10px;
+		&:before {
+			content: '';
+		}
+	}
+	a.flex-next {
+		background-position: 0 -48px;
+		right: 10px;
+		&:before {
+			content: '';
+		}
+	}
+}
+
+#heroslider {
+	.slides {
+		img { max-width: none; }
+	}
+
+	.container {
+		position: relative;
+	}
+}
+
+#lconsumer p {
+	color: red;
+}
+
+#lpublisher p {
+	color: green;
+}
+
+.slider-content {
+	position: absolute;
+	top: 10rem;
+	left: 10rem;
+	width: 100%;
+	max-width: 480px;
+	padding: 10px;
+	z-index: 1;
+
+	h1 {
+		color: #FFF;
+		text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+		margin: 0 0 20px;
+		margin-bottom: 4rem;
+		padding: 1rem;
+		padding-left: 2rem;
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+
+	ul li {
+		list-style: none;
+		display: inline;
+	}
+}
+
+
+.greenbutton {
+	@include inline-block;
+	padding: 1.3rem 2rem;
+	background-color: $buttongreen;
+	border: 1px solid $bordergreen;
+	text-align: center;
+	white-space: nowrap;
+}
+
+#lconsumer {
+	background-color: $sunset;
+
+	.slider-content {
+		top: 20%;
+		left: 10%;
+
+		.greenbutton {
+			padding: 1.3rem 2rem;
+			background-color: $buttongreen;
+			border: 1px solid $bordergreen;
+			margin-right: 2rem;
+			margin-top: 0rem;
+		}
+
+		ul li {
+			display: inline;
+		}
+
+		a, span, img {
+			vertical-align:middle;
+		}
+
+		.conGreen {
+			margin:0;
+			margin-right: 5rem;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			vertical-align:middle;
+		}
+
+
+	}
+}
+
+#appleImage {
+	height: 54px;
+	width: 182px;
+	display: inline;
+	vertical-align: middle;
+}
+
+#lpublisher {
+	background-color: $sky;
+
+	.learnMoreButton {
+		padding-left: 5rem;
+		padding-right: 5rem;
+		margin-right: 3rem;
+	}
+
+	.demoButton {
+		text-align: center;
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+}
+
+.cloudImage {
+	background:url('../images/sprites.png') no-repeat;
+	background-position: 0px -96px;
+	width: 16px;
+	height:16px;
+
+}
+//=============== circle area==================
+#forPub {
+	color: $textColor;
+	text-align: center;
+	margin-bottom: 5rem;
+}
+
+.columnOneThird {
+	display: table-cell;
+	padding: 0 10px;
+	text-align: center;
+	vertical-align: top;
+	width: 33.33333%;
+
+}
+
+section#circles {
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-bottom: 5rem;
+}
+
+p.subtitle {
+	@include subtitleType;
+	font-size: 26px;
+	font-size: 2.6rem;
+	margin-bottom: 2rem;
+}
+
+img.circle {
+	margin-bottom: 2rem;
+}
+
+p.circleContent {
+	margin: 0 auto 20px;
+	max-width: 190px;
+}
+
+a.circleLink {
+	@include linkType;
+	font-size: 18px;
+	font-size: 1.8rem;
+	color: $textgray;
+	padding-right:0;
+
+}
+
+.circleContainer {
+	display: table;
+	margin: 1.5em 0 1em;
+	width: 100%;
+}
+
+//=================== step area =================
+#steps {
+	width: 100%;
+	background-color: $gray;
+	height: 100%;
+	padding: 5rem 0;
+	text-align: center;
+
+	.container {
+		width: 990px;
+	}
+
+	.flexslider {
+		background-color: $gray;
+		border:0;
+		color: #fff;
+		margin: 0;
+		box-shadow: none;
+
+		h3 {
+			margin-bottom: 20px;
+			text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+		}
+
+		img {
+			margin-bottom: 40px;
+		}
+	}
+
+	.list-inline {
+		> li {
+			@include inline-block;
+			margin-left: 40px;
+			vertical-align: middle;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+
+//================ used by =====================
+#usedBySec {
+	margin-top: 5rem;
+	margin-left: 0;
+	margin-right: 0;
+	border-bottom-style: solid;
+	border-bottom-color: #eee;
+	border-bottom-width: 1px;
+
+
+	h1 {
+		color: $textColor;
+		text-align: center;
+		font-size: 28px;
+		font-size: 2.8rem;
+	}
+
+	#clientLogos {
+		display: table;
+		margin: 3rem auto;
+	}
+
+	ul li {
+		display: table-cell;
+
+	}
+
+	ul li img {
+		padding: 1rem 2rem;
+	}
+}
+
+footer {
+	width: 100%;
+	height: 100px;
+	background-color: $footerColor;
+}
+
+.italic {
+	font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
